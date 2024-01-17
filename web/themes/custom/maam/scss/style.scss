@@ -58,3 +58,40 @@ a {
 .slick>div {
     margin: 0 15px;
 }
+@media (min-width: 1400px){
+    .container{
+        max-width: 1440px!important;
+    }
+}
+
+
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+.header .navbar{
+    padding: 12px 0;
+}
+.header ul{
+    gap: 24px;
+}
+.header .nav-link {
+    font-family: 'Archivo', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    color: #fff;
+}
+.header:hover .nav-link{
+    color: #fff;
+}
+.banner{
+    background-image: url(http://maam.local.com/sites/default/files/2024-01/bannerHero_0.png);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    padding-top: 91px;
+}
