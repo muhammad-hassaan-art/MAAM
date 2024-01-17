@@ -24,7 +24,9 @@
         "drupal/paragraphs": "^1.17",
         "drupal/admin_toolbar": "^3.4",
         "drupal/bootstrap_barrio": "^5.5",
-        "drupal/bootstrap_sass": "^5.0"
+        "drupal/bootstrap_sass": "^5.0",
+        "drupal/twig_tweak": "^3.2",
+        "drupal/viewsreference": "^2.0@beta"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
