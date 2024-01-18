@@ -1,0 +1,18 @@
+
+<div class="banner" style="background-image: url('{{ image_url }}');">
+  {% for item in content.field_hero_banner["#items"] %}
+            <img src="{{ file_url(item.entity.field_media_image.entity.uri.value) }}" alt="banner image" >
+  {% endfor %}
+   
+</div>
+
+{{(content.field_hero_title['#items'].getValue()[0]['value'])}}
+
+
+        <p class="description">{{ dump(content.field_interactive_card['#items'].entity.field_date.value) }}</p>
+		<p class="description">{{ dump(content.field_interactive_card['#items'].entity.title.value) }}</p>
+        {% if content.field_interactive_card['#items'] %}
+            <div class="unit-activities">
+					<a href="{{ path('entity.node.canonical', {'node': content.field_interactive_card['#items'].entity.id}) }}">Unit Activities</a>
+				</div>
+		{% endif %}
