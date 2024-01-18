@@ -10,88 +10,55 @@ Description: Bootstrap 4 with Sass
 -------------------------------------------------*/
 
 body {
-    background: $white;
+  background: $white;
 }
-
 
 /* COLORS 
 --------------------------------------------------*/
 
 a {
-    color: $accent-shade;
+  color: $accent-shade;
 }
 
 .bg-inverse {
-    background: $primary-shade !important;
+  background: $primary-shade !important;
 }
 
 .site-footer {
-    background: $accent-shade !important;
+  background: $accent-shade !important;
 }
 
 .menu--main li a {
-    color: $primary-shade;
+  color: $primary-shade;
 }
 
 .menu--account li a {
-    color: $primary-shade;
+  color: $primary-shade;
 }
 
 .site-name-slogan a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .card-group img {
-    margin: 0;
-    width: 100%;
-    height: auto;
+  margin: 0;
+  width: 100%;
+  height: auto;
 }
 
 .card-group .field--type-image {
-    margin: 0
+  margin: 0;
 }
 
 .slick {
-    width: 100%;
+  width: 100%;
 }
 
-.slick>div {
-    margin: 0 15px;
+.slick > div {
+  margin: 0 15px;
 }
-@media (min-width: 1400px){
-    .container{
-        max-width: 1440px!important;
-    }
-}
-
-
-
-.header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-}
-.header .navbar{
-    padding: 12px 0;
-}
-.header ul{
-    gap: 24px;
-}
-.header .nav-link {
-    font-family: 'Archivo', sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 24px;
-    color: #fff;
-}
-.header:hover .nav-link{
-    color: #fff;
-}
-.banner{
-    background-image: url(/sites/default/files/2024-01/bannerHero_0.png);
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    padding-top: 91px;
-}
+// @media (min-width: 1400px) {
+//   .container {
+//     max-width: 1440px !important;
+//   }
+// }
