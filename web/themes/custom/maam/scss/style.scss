@@ -62,3 +62,15 @@ a {
 //     max-width: 1440px !important;
 //   }
 // }
+#main {
+  .row.row-offcanvas.row-offcanvas-left.clearfix {
+    margin: 0;
+  }
+  #content {
+    padding: 0;
+    flex: none;
+  }
+  .node__content {
+    margin: 0 !important;
+  }
+}

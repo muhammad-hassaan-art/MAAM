@@ -1,0 +1,135 @@
+.community-block {
+  background: #001253;
+  padding: 64px 0;
+  .viewsreference--view-title,
+  .field__label {
+    display: none;
+  }
+  .heading {
+    padding: 40px 0;
+    h1 {
+      font-family: Archivo;
+      font-size: 57px;
+      font-weight: 700;
+      line-height: 65px;
+      color: #fff;
+      text-transform: capitalize;
+      margin: 0;
+    }
+  }
+  .community-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    p {
+      font-family: Archivo;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      color: #fff;
+    }
+    .community-link {
+      a {
+        padding: 12px 24px;
+        border-radius: 4px;
+        background: #1c66a6;
+        color: #fff;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        text-decoration: none !important;
+        font-family: Archivo;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.64px;
+        border: 1px solid #1c66a6;
+        display: block;
+        &:hover {
+          background: #008bb3;
+          border: 1px solid #008bb3;
+        }
+      }
+    }
+  }
+  .community-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: hidden;
+    &::after {
+      content: "";
+      display: block;
+      background-image: url(/themes/custom/maam/images/community-card-bg.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 50px;
+    }
+    .community-content {
+      display: flex;
+      padding: 40px 40px 0px 40px;
+      flex-direction: column;
+      gap: 16px;
+      .community-card-icon-wrapper {
+        display: flex;
+        align-items: center;
+        a {
+          font-family: Archivo;
+          font-size: 18px;
+          font-weight: 800;
+          line-height: 30px;
+          color: #000;
+          border: 1px solid #000;
+          border-left: 0;
+          text-decoration: none !important;
+          padding: 0 8px;
+        }
+        &::before {
+          content: "";
+          display: inline-block;
+          background-image: url(/themes/custom/maam/images/community-icon.svg);
+          width: 32px;
+          height: 32px;
+        }
+      }
+      .community-card-heading-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        h1 {
+          font-family: Archivo;
+          font-size: 57px;
+          font-weight: 700;
+          line-height: 65px;
+          color: #000;
+          margin: 0;
+        }
+        p {
+          font-family: Archivo;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 28px;
+          color: #000;
+          margin: 0;
+          a {
+            text-decoration: none !important;
+            color: #000;
+          }
+        }
+      }
+      .community-card-link {
+        a {
+          font-family: Archivo;
+          font-size: 18px;
+          font-style: italic;
+          font-weight: 700;
+          line-height: 24px;
+          text-decoration-line: underline;
+          color: #1c66a6;
+        }
+      }
+    }
+  }
+}

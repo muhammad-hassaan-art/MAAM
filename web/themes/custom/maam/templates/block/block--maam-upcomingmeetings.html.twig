@@ -1,0 +1,16 @@
+<div class="upcoming-meetings-block">
+	<div class="container">
+		<div class="heading">
+			<h1>{{ label }}</h1>
+		</div>
+		{{(content.field_upcoming_meetings_view)}}
+		<div class="upcoming-meeting-link-wrapper d-flex align-items-center justify-content-center">
+			<div class="upcoming-meeting-link d-inline-block">
+				<a href="{{ content.field_link_1['#items'].uri }}">{{content.field_link_1['#items'].title}}</a>
+			</div>
+			<div class="upcoming-meeting-link upcoming-meeting-link2 d-inline-block">
+				<a href="{{content.field_link_2['#items'].uri}}">{{content.field_link_2['#items'].title}}</a>
+			</div>
+		</div>
+	</div>
+</div>

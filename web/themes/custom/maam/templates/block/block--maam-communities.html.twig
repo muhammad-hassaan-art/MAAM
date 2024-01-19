@@ -1,0 +1,22 @@
+<div class="community-block">
+	<div class="container">
+		<div class="heading">
+			<h1>{{ label }}</h1>
+		</div>
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="community-content">
+					<p>{{content.body['#items'].value | striptags }}</p>
+					<div class="community-link">
+						<a href="{{content.field_cta['#items'].uri}}">{{content.field_cta['#items'].title}}</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="community-card-wrapper">
+					{{(content.field_communities_view)}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
