@@ -8,15 +8,14 @@
 		<div class="row">
 			<div class="col-lg-7">
 				<div class="banner-content">
-					<h1>{{(content.field_hero_title['#items'].getValue()[0]['value'])}}</h1>
+					<h1>{{ content.field_hero_title['#items'].getValue()[0]['value'] }}</h1>
 				</div>
 			</div>
 			<div class="col-lg-5">
 				<div class="banner-content custom-banner-content">
 					<img src="/themes/custom/maam/images/banner-img.png" alt="">
 					<div class="banner-detail">
-						<div class="date-content">{{ (content.field_interactive_card['#items'].entity.field_date.value | date('F d, Y'))}}
-						</div>
+						<div class="date-content">{{ (content.field_interactive_card['#items'].entity.field_date.value | date('F d, Y')) }}</div>
 						<p class="description">{{ content.field_interactive_card['#items'].entity.title.value }}</p>
 						{% if content.field_interactive_card['#items'] %}
 							<div class="unit-activities">

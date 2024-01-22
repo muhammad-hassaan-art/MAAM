@@ -1,9 +1,17 @@
+.community-bg {
+  img {
+    width: 100%;
+  }
+}
 .community-block {
   background: #001253;
   padding: 64px 0;
   .viewsreference--view-title,
   .field__label {
     display: none;
+  }
+  .row {
+    row-gap: 32px;
   }
   .heading {
     padding: 40px 0;
@@ -42,7 +50,7 @@
         line-height: 18px;
         letter-spacing: 0.64px;
         border: 1px solid #1c66a6;
-        display: block;
+        display: inline-block;
         &:hover {
           background: #008bb3;
           border: 1px solid #008bb3;
@@ -58,6 +66,9 @@
     flex-direction: column;
     gap: 16px;
     overflow: hidden;
+    &:hover {
+      background: #008bb3;
+    }
     &::after {
       content: "";
       display: block;
@@ -128,6 +139,53 @@
           line-height: 24px;
           text-decoration-line: underline;
           color: #1c66a6;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .community-block {
+    padding-top: 40px;
+
+    .heading {
+      padding-top: 0;
+      padding-bottom: 32px;
+      h1 {
+        font-size: 38px;
+        line-height: 50px;
+      }
+    }
+    .community-content {
+      gap: 32px;
+    }
+    .community-card-wrapper {
+      .views-view-responsive-grid.views-view-responsive-grid--horizontal {
+        gap: 24px;
+      }
+    }
+    .community-card {
+      .community-content {
+        padding: 24px 24px 0px 24px;
+        gap: 12px;
+        .community-card-icon-wrapper {
+          a {
+            font-size: 16px;
+            line-height: 20px;
+          }
+          &::before {
+            flex-shrink: 0;
+          }
+        }
+        .community-card-heading-content {
+          h1 {
+            font-size: 38px;
+            line-height: 50px;
+          }
+          p {
+            font-size: 14px;
+            line-height: 18px;
+          }
         }
       }
     }

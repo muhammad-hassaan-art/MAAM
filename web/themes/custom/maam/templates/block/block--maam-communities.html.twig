@@ -1,20 +1,29 @@
-<div class="community-block">
-	<div class="container">
-		<div class="heading">
-			<h1>{{ label }}</h1>
-		</div>
-		<div class="row">
-			<div class="col-lg-3">
-				<div class="community-content">
-					<p>{{content.body['#items'].value | striptags }}</p>
-					<div class="community-link">
-						<a href="{{content.field_cta['#items'].uri}}">{{content.field_cta['#items'].title}}</a>
+<div class="community-main">
+	<div class="community-bg">
+		<img src="/themes/custom/maam/images/communityBg.png" alt="communityBg">
+	</div>
+	<div class="community-block">
+		<div class="container">
+			<div class="heading">
+				<h1>{{ label }}</h1>
+			</div>
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="community-content">
+						{% if content.body['#items'].value is not empty %}
+							<p>{{ content.body['#items'].value | striptags }}</p>
+						{% endif %}
+						<div class="community-link">
+							{% if content.field_cta['#items'].uri is not empty %}
+								<a href="{{ content.field_cta['#items'].uri }}">{{ content.field_cta['#items'].title }}</a>
+							{% endif %}
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-9">
-				<div class="community-card-wrapper">
-					{{(content.field_communities_view)}}
+				<div class="col-lg-9">
+					<div class="community-card-wrapper">
+						{{ content.field_communities_view }}
+					</div>
 				</div>
 			</div>
 		</div>

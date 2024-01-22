@@ -1,21 +1,23 @@
 <div class="mission-statement">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="mission-statement-content">
-                    <h1>{{ content.field_title['#items'].getValue()[0]['value'] }}</h1>
-                    <p>{{ content.field_description['#items'].getValue()[0]['value'] }}</p>
-                    <div class="mission-statement-link">
-                        <a href="{{ content.field_cta['#items'].uri }}">{{content.field_cta['#items'].title}}</a>   
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="mission-statement-content">
+					{% if content.field_title['#items'].getValue()[0]['value'] is not empty %}
+						<h1>{{ content.field_title['#items'].getValue()[0]['value'] }}</h1>
+					{% endif %}
+
+					{% if content.field_description['#items'].getValue()[0]['value'] is not empty %}
+						<p>{{ content.field_description['#items'].getValue()[0]['value'] }}</p>
+					{% endif %}
+
+					<div class="mission-statement-link">
+						{% if content.field_cta['#items'].uri is not empty %}
+							<a href="{{ content.field_cta['#items'].uri }}">{{ content.field_cta['#items'].title }}</a>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-
-{# {{dump(content.field_title['#items'].getValue()[0]['value'])}}
-{{dump(content.field_description['#items'].getValue()[0]['value'])}}
-{{dump(content.field_cta['#items'].uri)}}
-{{dump(content.field_cta['#items'].title)}} #}
