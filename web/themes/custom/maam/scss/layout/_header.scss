@@ -3,6 +3,15 @@
   left: 0;
   top: 0;
   right: 0;
+  transition: top 0.3s, background-color 0.3s;
+  // z-index: 999;
+}
+
+.header.hidden {
+  top: -80px;
+}
+.header.scrolling-up {
+  background-color: #001253;
 }
 .header .navbar {
   padding: 12px 0;

@@ -1,5 +1,28 @@
-{{ label }}
+<div class="map-block">
+	<div class="map-bg-content">
+		{{content.field_map}}
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-xl-8"></div>
+			<div class="col-md-6 col-xl-4">
+				<div class="map-content">
+					<h2>
+						{{ label }}
+					</h2>
+					<p>{{content.body}}</p>
+					<div class="map-link">
+						<a href="{{ content.field_card_link[0]['#url'] }}">
+							{{ content.field_card_link[0]['#title'] }}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{# {{ label }}
 {{content.body}}
 {{ content.field_card_link[0]['#url'] }}
-{{ content.field_card_link[0]['#title'] }}
-{{content.field_map}}
+{{ content.field_card_link[0]['#title'] }} #}

@@ -66,9 +66,7 @@
     flex-direction: column;
     gap: 16px;
     overflow: hidden;
-    &:hover {
-      background: #008bb3;
-    }
+    transition: all 0.3s;
     &::after {
       content: "";
       display: block;
@@ -141,6 +139,9 @@
           color: #1c66a6;
         }
       }
+    }
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }

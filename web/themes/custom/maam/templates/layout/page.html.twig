@@ -152,13 +152,7 @@
       {% block content %}
         <div id="main">
           {{ page.breadcrumb }}
-          <div class="row row-offcanvas row-offcanvas-left clearfix">
-              <main{{ content_attributes }}>
-                <section class="section">
-                  <a href="#main-content" id="main-content" tabindex="-1"></a>
-                  {{ page.content }}
-                </section>
-              </main>
+          <div class="row row-offcanvas row-offcanvas-left clearfix">     
             {% if sidebar_first_exists %}
               <div{{ sidebar_first_attributes }}>
                 <aside class="section" role="complementary">
@@ -166,6 +160,12 @@
                 </aside>
               </div>
             {% endif %}
+             <main{{ content_attributes }}>
+                <section class="section">
+                  <a href="#main-content" id="main-content" tabindex="-1"></a>
+                  {{ page.content }}
+                </section>
+              </main>
             {% if sidebar_second_exists %}
               <div{{ sidebar_second_attributes }}>
                 <aside class="section" role="complementary">
@@ -180,9 +180,18 @@
     {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
       <div class="featured-bottom">
         <aside class="{{ container }} clearfix" role="complementary">
-          {{ page.featured_bottom_first }}
-          {{ page.featured_bottom_second }}
-          {{ page.featured_bottom_third }}
+          <div class="row">
+            <div class="col-md-4">
+              {{ page.featured_bottom_first }}
+            </div>
+            <div class="col-md-8">
+              {{ page.featured_bottom_second }}
+            </div>
+             <div class="col-12">
+              {{ page.featured_bottom_third }}
+            </div>
+          </div>
+          
         </aside>
       </div>
     {% endif %} 
