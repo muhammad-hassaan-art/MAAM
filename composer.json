@@ -27,7 +27,8 @@
         "drupal/bootstrap_sass": "^5.0",
         "drupal/twig_tweak": "^3.2",
         "drupal/viewsreference": "^2.0@beta",
-        "drupal/styled_google_map": "2.3"
+        "drupal/styled_google_map": "2.3",
+        "drupal/better_exposed_filters": "dev-6.0.x"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
