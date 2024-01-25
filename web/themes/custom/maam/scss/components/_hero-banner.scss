@@ -1,30 +1,42 @@
-.banner {
-  padding-top: 140px;
-  padding-bottom: 230px;
-  position: relative;
-  .row {
-    align-items: center;
-  }
-  .banner-bg-img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 640px;
+.banner-main {
+  .banner {
+    padding-top: 140px;
+    padding-bottom: 18%;
+    position: relative;
+    background-image: url(/themes/custom/maam/images/banner-hero.png);
     z-index: -1;
-    img {
-      width: 100%;
-      height: 100%;
+    .row {
+      align-items: center;
     }
-  }
-  .banner-content {
-    h1 {
-      font-family: Archivo;
-      font-size: clamp(45px, 5vw, 76px);
-      font-weight: 700;
-      line-height: 1.2;
-      color: #fff;
-      margin: 0;
+    .banner-bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      img {
+        width: 100%;
+      }
+    }
+    .banner-content {
+      h1 {
+        font-family: Archivo;
+        font-size: 76px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #fff;
+        margin: 0;
+      }
+    }
+    .banner-content-left {
+      p {
+        margin-top: 40px;
+        margin-bottom: 0;
+        color: #fff;
+        font-family: Archivo;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
     }
   }
   .custom-banner-content {
@@ -69,39 +81,26 @@
     }
   }
 }
-@media screen and (max-width: 991px) {
-  .banner {
-    padding-top: 120px;
-    padding-bottom: 24px;
-    .row {
-      row-gap: 130px;
-    }
-    .banner-bg-img {
-      height: 500px;
-    }
-    .banner-content {
-      h1 {
-        font-size: clamp(42px, 10vw, 70px);
-      }
-    }
-    .custom-banner-content {
-      .banner-detail {
-        padding: 0px 24px 24px 24px;
+@media screen and (max-width: 1500px) {
+  .banner-main {
+    .banner {
+      padding-top: 120px;
+      .banner-content {
+        h1 {
+          font-size: 60px;
+        }
       }
     }
   }
 }
 @media screen and (max-width: 767px) {
-  .banner {
-    .banner-bg-img {
-      height: 400px;
-    }
-  }
-}
-@media screen and (max-width: 389px) {
-  .banner {
-    .banner-bg-img {
-      height: 456px;
+  .banner-main {
+    .banner {
+      .banner-content {
+        h1 {
+          font-size: 42px;
+        }
+      }
     }
   }
 }
