@@ -29,3 +29,14 @@
 .header:hover .nav-link {
   color: #fff;
 }
+@media screen and (max-width: 991px) {
+  .navbar-collapse {
+    display: none;
+  }
+  .show-navbar {
+    display: block !important;
+  }
+  .header:has(.show-navbar) {
+    background: #001253;
+  }
+}
