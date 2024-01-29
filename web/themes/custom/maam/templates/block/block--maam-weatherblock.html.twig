@@ -1,0 +1,55 @@
+<div id="weather-block">
+    <div id="weather-content">
+        <img id="weather-icon" alt="Weather Icon">
+        <p id="temperature"></p>
+        <p id="feels-like"></p>
+        <p id="conditions"></p>
+        
+    </div>
+</div>
+<script>
+    async function getData() {
+        var ApiKey = '31ebe6d5d4c12a0b603f7e48d1eee607';
+        const weatherBlock = document.getElementById('weather-block');
+        const temperatureElement = document.getElementById('temperature');
+        const feelsLikeElement = document.getElementById('feels-like');
+        const weatherIconElement = document.getElementById('weather-icon');
+        const conditionsElement = document.getElementById('conditions')
+
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=50.8198&lon=1.0880&appid=${ApiKey}`;
+
+        try {
+            const response = await fetch(apiUrl);
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            const { main, weather } = data;
+
+            console.log('weather', weather);
+
+            // Update HTML elements with temperature, feels_like, and weather icon data
+            temperatureElement.textContent = `Temperature: ${main.temp} °C`;
+            feelsLikeElement.textContent = `Feels Like: ${main.feels_like} °C`;
+
+            // Set the weather icon image source
+            if (weather.length > 0) {
+                const iconCode = weather[0].icon;
+                const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
+                weatherIconElement.src = iconUrl;
+
+                const conditions = `${weather[0].main} - ${weather[0].description}`;
+                conditionsElement.textContent = conditions;
+            }
+
+            return data;
+        } catch (error) {
+            console.error('Fetch error:', error);
+        }
+    }
+    getData().then((data) => {
+        console.log('Function Called', data);
+    });
+</script>

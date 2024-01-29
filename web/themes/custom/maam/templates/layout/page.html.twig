@@ -74,10 +74,7 @@
 <div id="page-wrapper">
   <div id="page">
     <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
-        <div class="container">
-        
-        {% block head %}
-            {# {% if page.secondary_menu or page.top_header or page.top_header_form %}
+    {% if page.secondary_menu or page.top_header or page.top_header_form %}
             <nav{{ navbar_top_attributes }}>
             {% if container_navbar %}
         
@@ -93,7 +90,11 @@
 
             {% endif %}
             </nav>
-            {% endif %} #}
+            {% endif %}
+        <div class="container">
+        
+        {% block head %}
+            
             {% if page.header or page.primary_menu or page.header_form %}
             <nav class="navbar navbar-dark  navbar-expand-lg " id="navbar-main">
                 {% if container_navbar %}

@@ -1,0 +1,14 @@
+<div id="date-container">
+    
+</div>
+
+<script>
+    function updateDate() {
+        const dateContainer = document.getElementById('date-container');
+        const currentDate = new Date();
+        const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+        const formattedDate = currentDate.toLocaleDateString('en-US', options);
+        dateContainer.textContent = formattedDate;
+    }
+    console.log('status',updateDate());
+</script>
