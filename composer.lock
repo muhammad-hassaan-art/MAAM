@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f8352d2926bfff51f2a92d05fd148f0c",
+    "content-hash": "3f24d5ff1390c75ee3437823a0410759",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2342,6 +2342,63 @@
             }
         },
         {
+            "name": "drupal/views_field_view",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_field_view.git",
+                "reference": "9b036e8fbb49e9fade78e57203e25e9731532f7c"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta4+1-dev",
+                    "datestamp": "1675318281",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "damiankloip",
+                    "homepage": "https://www.drupal.org/user/1037976"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "jibran",
+                    "homepage": "https://www.drupal.org/user/1198144"
+                },
+                {
+                    "name": "tizzo",
+                    "homepage": "https://www.drupal.org/user/168251"
+                },
+                {
+                    "name": "voxpelli",
+                    "homepage": "https://www.drupal.org/user/341713"
+                }
+            ],
+            "description": "Adds a view field handler to embed views inside views.",
+            "homepage": "https://www.drupal.org/project/views_field_view",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_field_view"
+            }
+        },
+        {
             "name": "drupal/viewsreference",
             "version": "2.0.0-beta7",
             "source": {
@@ -2402,6 +2459,63 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/viewsreference",
                 "issues": "https://www.drupal.org/project/issues/viewsreference"
+            }
+        },
+        {
+            "name": "drupal/weather-weather",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/weather.git",
+                "reference": "fcf70e1eb33a525eccf9b72c5dca8ccd015dec58"
+            },
+            "require": {
+                "drupal/core": "^10",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "drupal/block-block": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "2.1.0+18-dev",
+                    "datestamp": "1676413776",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Dr. Tobias Quathamer (toddy)",
+                    "homepage": "https://www.drupal.org/u/toddy",
+                    "role": "Author"
+                },
+                {
+                    "name": "Taras Kyryliuk (tarasich)",
+                    "homepage": "https://www.drupal.org/u/tarasich",
+                    "role": "Author"
+                },
+                {
+                    "name": "Yaroslav Samoilenko (ysamoylenko)",
+                    "homepage": "https://www.drupal.org/u/ysamoylenko",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Displays current weather and forecasts",
+            "homepage": "https://drupal.org/project/weather",
+            "support": {
+                "source": "https://git.drupalcode.org/project/weather",
+                "issues": "https://drupal.org/project/issues/weather"
             }
         },
         {
@@ -12460,7 +12574,9 @@
     "stability-flags": {
         "pantheon-upstreams/upstream-configuration": 20,
         "drupal/viewsreference": 10,
-        "drupal/better_exposed_filters": 20
+        "drupal/better_exposed_filters": 20,
+        "drupal/views_field_view": 20,
+        "drupal/weather-weather": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
