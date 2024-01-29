@@ -182,10 +182,10 @@
       <div class="featured-bottom">
         <aside class="{{ container }} clearfix" role="complementary">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-4">
               {{ page.featured_bottom_first }}
             </div>
-            <div class="col-md-8">
+            <div class="col-lg-8">
               {{ page.featured_bottom_second }}
             </div>
              <div class="col-12">
@@ -222,3 +222,12 @@
     </div>
   </div>
 </div>
+
+
+<script>
+document
+  .querySelector(".navbar-toggler")
+  .addEventListener("click", function () {
+    document.querySelector(".navbar-collapse").classList.toggle("show-navbar");
+  });
+  </script>

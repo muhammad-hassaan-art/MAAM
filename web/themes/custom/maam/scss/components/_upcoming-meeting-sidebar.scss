@@ -1,0 +1,115 @@
+.upcoming-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  h3 {
+    color: #131212;
+    font-family: Archivo;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 0;
+  }
+  .upcomings-meetings-list {
+    .field__label,
+    .viewsreference--view-title {
+      display: none;
+    }
+    .view-content {
+      gap: 16px;
+    }
+  }
+  .upcoming-meetings-content {
+    background: #fff;
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s;
+    .meeting-icon {
+      width: 64px;
+      height: 64px;
+      background: #1c66a6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px 0 0 6px;
+      flex-shrink: 0;
+      &:before {
+        content: "";
+        background-image: url(/themes/custom/maam/images/calendar-white.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 28px;
+        display: inline-block;
+      }
+    }
+    .date-content {
+      color: #131212;
+      font-family: Archivo;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+    .meeting-title {
+      color: #131212;
+      font-family: Archivo;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  .upcoming-meetings-link {
+    a {
+      padding: 12px 24px;
+      border-radius: 4px;
+      background: #1c66a6;
+      color: #fff;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+      text-decoration: none !important;
+      font-family: Archivo;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.64px;
+      border: 1px solid #1c66a6;
+      display: inline-block;
+      &:hover {
+        background: #008bb3;
+        border: 1px solid #008bb3;
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .upcoming-sidebar {
+    margin-bottom: 40px;
+    h3 {
+      font-size: 21px;
+      line-height: 25px;
+    }
+    .upcomings-meetings-list {
+      .view-content {
+        .views-row {
+          width: 48%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .upcoming-sidebar {
+    .upcomings-meetings-list {
+      .view-content {
+        .views-row {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

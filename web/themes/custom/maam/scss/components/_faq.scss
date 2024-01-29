@@ -45,6 +45,7 @@
       }
     }
     .faq-answer {
+      display: none;
       p {
         font-family: Archivo;
         font-size: 18px;
@@ -52,6 +53,9 @@
         line-height: 28px;
         color: #131212;
       }
+    }
+    .faq-show {
+      display: block;
     }
   }
 }
