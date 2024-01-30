@@ -1,0 +1,20 @@
+.views-exposed-form {
+  max-width: 1320px;
+  margin: auto;
+  padding: 40px 12px;
+  #edit-field-community-target-id--wrapper {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .form-composite {
+    .form-radios {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      label {
+        font-family: Archivo;
+      }
+    }
+  }
+}

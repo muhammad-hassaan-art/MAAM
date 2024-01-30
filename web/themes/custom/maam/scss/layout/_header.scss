@@ -29,6 +29,9 @@
 .header:hover .nav-link {
   color: #fff;
 }
+nav#navbar-top {
+  background: #fcc804 !important;
+}
 @media screen and (max-width: 991px) {
   .navbar-collapse {
     display: none;
@@ -38,5 +41,10 @@
   }
   .header:has(.show-navbar) {
     background: #001253;
+  }
+}
+@media screen and (max-width: 767px) {
+  nav#navbar-top {
+    justify-content: center;
   }
 }

@@ -1,6 +1,6 @@
 .banner-main {
   .banner {
-    padding-top: 140px;
+    padding-top: 181px;
     padding-bottom: 18%;
     position: relative;
     background-image: url(/themes/custom/maam/images/banner-hero.png);
@@ -77,6 +77,33 @@
         line-height: 24px;
         text-decoration-line: underline;
         color: #1c66a6;
+      }
+    }
+  }
+  .resources-content {
+    padding: 24px;
+    legend {
+      color: #131212;
+      font-family: Archivo;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 22px;
+      letter-spacing: 1.44px;
+      text-transform: uppercase;
+    }
+    .resources-content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 16px;
+      .resources-content-list {
+        width: 50%;
+        input {
+        }
+        label {
+          // color: #1c66a6;
+          font-family: Archivo;
+        }
       }
     }
   }

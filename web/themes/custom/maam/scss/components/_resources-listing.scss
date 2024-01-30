@@ -1,0 +1,83 @@
+.resources-listing-wrapper {
+  .view-content {
+    gap: 40px;
+  }
+  .resources-listing-heading {
+    h2 {
+      margin-bottom: 24px;
+      a {
+        color: #131212;
+        font-family: Archivo;
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 44px;
+        text-decoration: none !important;
+      }
+    }
+    p {
+      color: #131212;
+      font-family: Archivo;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 0;
+    }
+  }
+  .resources-listing-content {
+    background: #fff;
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    gap: 24px;
+    justify-content: space-between;
+    transition: all 0.3s;
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      a {
+        font-family: Archivo;
+      }
+      &::before {
+        content: "";
+        width: 15px;
+        height: 21px;
+        background-image: url(/themes/custom/maam/images/file-lines.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+      }
+    }
+    .date-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      .date-content {
+        .datetime {
+          font-family: Archivo;
+        }
+        .file {
+          a {
+            font-family: Archivo;
+          }
+        }
+      }
+      &::after {
+        content: "";
+        width: 20px;
+        height: 21px;
+        background-image: url(/themes/custom/maam/images/download.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+      }
+    }
+    &:hover {
+      transform: scale(1.005);
+    }
+  }
+}

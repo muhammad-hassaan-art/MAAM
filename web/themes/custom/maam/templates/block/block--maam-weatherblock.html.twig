@@ -1,13 +1,17 @@
 <div id="weather-block">
-    <div id="weather-content">
-        <img id="weather-icon" alt="Weather Icon">
-        <p id="temperature"></p>
-        <p id="feels-like"></p>
-        <p id="conditions"></p>
-        
-    </div>
+	<div id="weather-content">
+		<img id="weather-icon" alt="Weather Icon">
+		<div class="d-flex gap-3">
+			<p id="temperature"></p>
+			<p>/</p>
+			<p id="feels-like"></p>
+		</div>
+
+		<p id="conditions"></p>
+
+	</div>
 </div>
-<script>
+ <script>
     async function getData() {
         var ApiKey = '31ebe6d5d4c12a0b603f7e48d1eee607';
         const weatherBlock = document.getElementById('weather-block');
@@ -31,8 +35,8 @@
             console.log('weather', weather);
 
             // Update HTML elements with temperature, feels_like, and weather icon data
-            temperatureElement.textContent = `Temperature: ${main.temp} °C`;
-            feelsLikeElement.textContent = `Feels Like: ${main.feels_like} °C`;
+            temperatureElement.textContent = `${main.temp} °C`;
+            feelsLikeElement.textContent = `${main.feels_like} °C`;
 
             // Set the weather icon image source
             if (weather.length > 0) {
