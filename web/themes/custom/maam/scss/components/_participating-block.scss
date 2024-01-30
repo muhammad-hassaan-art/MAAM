@@ -1,0 +1,103 @@
+.participating-cards-block {
+  padding: 80px 0;
+  .participating-card {
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s;
+    overflow: hidden;
+    .participating-card-img {
+      img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+      }
+    }
+    .participating-card-content {
+      padding: 16px;
+      display: flex;
+      gap: 16px;
+      flex-direction: column;
+      h3 {
+        a {
+          color: #1c66a6;
+          font-family: Archivo;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 32px;
+          text-decoration: none;
+        }
+        margin: 0;
+      }
+      .participating-value-wrapper {
+        display: flex;
+        .participating-value-content {
+          width: 50%;
+          .participating-label {
+            color: #131212;
+            font-family: Archivo;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 15px;
+          }
+          .participating-value {
+            color: #131212;
+            font-family: Archivo;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+          }
+        }
+      }
+      .body-content {
+        p {
+          font-family: Archivo;
+          margin: 0;
+          height: 72px;
+          overflow: auto;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      }
+      .participating-link a {
+        color: #1c66a6;
+        font-family: Archivo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration-line: underline;
+      }
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .participating-cards-block {
+    padding: 64px 0;
+    .participating-card {
+      .participating-card-img {
+        img {
+          height: 160px;
+        }
+      }
+      .participating-card-content {
+        h3 {
+          a {
+            font-size: 21px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+  }
+}
