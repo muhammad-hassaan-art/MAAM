@@ -28,7 +28,9 @@
         "drupal/twig_tweak": "^3.2",
         "drupal/viewsreference": "^2.0@beta",
         "drupal/styled_google_map": "2.3",
-        "drupal/better_exposed_filters": "dev-6.0.x"
+        "drupal/better_exposed_filters": "dev-6.0.x",
+        "drupal/views_field_view": "dev-1.x",
+        "drupal/weather-weather": "dev-2.x"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
