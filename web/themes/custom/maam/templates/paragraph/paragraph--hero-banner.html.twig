@@ -1,3 +1,11 @@
+{# Get the URL path of the current page #}
+{% set currentPath = url('<current>') %}
+{% set currenPathString = currentPath['#markup'] %}
+
+{# Split the URL path into an array of components #}
+{% set currentPathLast = currenPathString|split('/') %}
+{# Get the last component of the path #}
+{% set lastPathComponent = currentPathLast|last %}
 
 <div class="banner-main">
   <div class="banner">
@@ -17,34 +25,34 @@
             {% endif %}
           </div>
         </div>
-
-        {% if content.field_communities_filter %}
-          {% set communitiesFilterItem = content.field_communities_filter.0.contents %}
-          {% set viewExecutable = communitiesFilterItem['#view'] %}
-          {% set rows = viewExecutable.result %}
-          <div class="col-lg-5 d-none d-lg-block">
-            <div class="banner-content custom-banner-content resources-content">
-              <legend>Resources By Community</legend>
-              <div class="resources-content-wrapper">
-                <div class="resources-content-list">
-                  <input type="radio" id="community-all-c" name="field_community_target_id-c" value="all" checked="checked" />
-                  <label for="community-all-c">- Any -</label>
+        {% if lastPathComponent == 'resources' %}
+          {% if content.field_communities_filter %}
+            {% set communitiesFilterItem = content.field_communities_filter.0.contents %}
+            {% set viewExecutable = communitiesFilterItem['#view'] %}
+            {% set rows = viewExecutable.result %}
+            <div class="col-lg-5 d-none d-lg-block">
+              <div class="banner-content custom-banner-content resources-content">
+                <legend>Resources By Community</legend>
+                <div class="resources-content-wrapper">
+                  <div class="resources-content-list">
+                    <input type="radio" id="community-all-c" name="field_community_target_id-c" value="all" checked="checked" />
+                    <label for="community-all-c">- Any -</label>
+                  </div>
+                  {# Loop through the rows to get the values #}
+                  {% for row in rows %}
+                      {% set termEntity = row._entity %}
+                      {% set tid = termEntity.tid.value %}
+                      {% set name = termEntity.name.value %}
+                      {# Now you can use 'tid' and 'name' variables in your template #}
+                      <div class="resources-content-list">
+                        <input type="radio" id='community-{{name}}-c' name="field_community_target_id-c" value=[{{tid}}] />
+                        <label for='community-{{name}}-c'>{{name}}</label>
+                      </div>
+                  {% endfor %}
                 </div>
-                {# Loop through the rows to get the values #}
-                {% for row in rows %}
-                    {% set termEntity = row._entity %}
-                    {% set tid = termEntity.tid.value %}
-                    {% set name = termEntity.name.value %}
-                    {# Now you can use 'tid' and 'name' variables in your template #}
-                    <div class="resources-content-list">
-                      <input type="radio" id='community-{{name}}-c' name="field_community_target_id-c" value=[{{tid}}] />
-                      <label for='community-{{name}}-c'>{{name}}</label>
-                    </div>
-                {% endfor %}
               </div>
             </div>
-          </div>
-
+          {% endif %}
         {% endif %}
         {% if content.field_interactive_card['#items'] %}
           <div class="col-lg-5 d-none d-lg-block">
