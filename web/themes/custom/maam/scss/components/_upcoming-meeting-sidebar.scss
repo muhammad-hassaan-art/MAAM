@@ -86,9 +86,13 @@
     }
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1199px) {
   .upcoming-sidebar {
     margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .upcoming-sidebar {
     h3 {
       font-size: 21px;
       line-height: 25px;
