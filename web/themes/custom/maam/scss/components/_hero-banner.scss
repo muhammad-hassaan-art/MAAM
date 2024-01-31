@@ -3,8 +3,17 @@
     padding-top: 181px;
     padding-bottom: 18%;
     position: relative;
-    background-image: url(/themes/custom/maam/images/banner-hero.png);
-    // z-index: -1;
+    &:after {
+      content: "";
+      background-image: url(/themes/custom/maam/images/banner-hero.png);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
     .row {
       align-items: center;
     }
@@ -111,7 +120,6 @@
 @media screen and (max-width: 1500px) {
   .banner-main {
     .banner {
-      padding-top: 120px;
       .banner-content {
         h1 {
           font-size: 60px;

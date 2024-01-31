@@ -10,9 +10,9 @@
 <div class="banner-main">
   <div class="banner">
     {# {% for item in content.field_hero_image["#items"] %}
-																																																																				<div class="banner-bg-img">
-																																																																					<img src="{{ file_url(item.entity.field_media_image.entity.uri.value) }}"></div>
-																																																																{% endfor %} #}
+          <div class="banner-bg-img">
+          <img src="{{ file_url(item.entity.field_media_image.entity.uri.value) }}"></div>
+      {% endfor %} #}
     <div class="container">
       <div class="row">
         <div class="col-lg-7">
@@ -27,7 +27,7 @@
         </div>
         {% if lastPathComponent == 'resources' %}
           {% if content.field_communities_filter %}
-            {% set communitiesFilterItem = content.field_communities_filter.0.contents %}
+            {% set communitiesFilterItem = content.field_communities_filter[0].contents %}
             {% set viewExecutable = communitiesFilterItem['#view'] %}
             {% set rows = viewExecutable.result %}
             <div class="col-lg-5 d-none d-lg-block">
@@ -40,14 +40,15 @@
                   </div>
                   {# Loop through the rows to get the values #}
                   {% for row in rows %}
-                      {% set termEntity = row._entity %}
-                      {% set tid = termEntity.tid.value %}
-                      {% set name = termEntity.name.value %}
-                      {# Now you can use 'tid' and 'name' variables in your template #}
-                      <div class="resources-content-list">
-                        <input type="radio" id='community-{{name}}-c' name="field_community_target_id-c" value=[{{tid}}] />
-                        <label for='community-{{name}}-c'>{{name}}</label>
-                      </div>
+                    {% set termEntity = row._entity %}
+                    {% set tid = termEntity.tid.value %}
+                    {% set name = termEntity.name.value %}
+                    {% set nameLower = termEntity.name.value|lower %}
+                    {# Now you can use 'tid' and 'name' variables in your template #}
+                    <div class="resources-content-list">
+                      <input type="radio" id="community-{{ nameLower }}-c" name="field_community_target_id-c" value="{{ tid }}" />
+                      <label for="community-{{ nameLower }}-c">{{ name }}</label>
+                    </div>
                   {% endfor %}
                 </div>
               </div>
@@ -91,55 +92,38 @@
       <img src="/themes/custom/maam/images/banner-bg.png" />
     </div>
   </div>
-  {# <div class="container py-4 py-lg-0">
-    <div class="col-lg-5 d-block d-lg-none">
-      <div class="banner-content custom-banner-content resources-content">
-        <legend>Resources By Community</legend>
-
-        <div class="resources-content-wrapper">
-          <div class="resources-content-list">
-            <input type="radio" id="community-all-c" name="field_community_target_id-c" value="all" checked="checked" />
-            <label for="community-all-c">- Any -</label>
-          </div>
-
-          <div class="resources-content-list">
-            <input type="radio" id="community-3-c" name="field_community_target_id-c" value="3" />
-            <label for="community-3-c">Dover</label>
-          </div>
-
-          <div class="resources-content-list">
-            <input type="radio" id="community-4-c" name="field_community_target_id-c" value="4" />
-            <label for="community-4-c">Exeter</label>
-          </div>
-
-          <div class="resources-content-list">
-            <input type="radio" id="community-5-c" name="field_community_target_id-c" value="5" />
-            <label for="community-5-c">Milton</label>
-          </div>
-
-          <div class="resources-content-list">
-            <input type="radio" id="community-6-c" name="field_community_target_id-c" value="6" />
-            <label for="community-6-c">Newington</label>
-          </div>
-
-          <div class="resources-content-list">
-            <input type="radio" id="community-7-c" name="field_community_target_id-c" value="7" />
-            <label for="community-7-c">Portsmouth</label>
-          </div>
-
-          <div class="resources-content-list">
-            <input type="radio" id="community-8-c" name="field_community_target_id-c" value="8" />
-            <label for="community-8-c">Rochester</label>
-          </div>
-
-          <div class="resources-content-list">
-            <input type="radio" id="community-9-c" name="field_community_target_id-c" value="9" />
-            <label for="community-9-c">Rollinsford</label>
+  {% if lastPathComponent == 'resources' %}
+    {% if content.field_communities_filter %}
+      {% set communitiesFilterItem = content.field_communities_filter[0].contents %}
+      {% set viewExecutable = communitiesFilterItem['#view'] %}
+      {% set rows = viewExecutable.result %}
+      <div class="container py-4 py-lg-0">
+        <div class="col-lg-5 d-block d-lg-none">
+          <div class="banner-content custom-banner-content resources-content">
+            <legend>Resources By Community</legend>
+            <div class="resources-content-wrapper">
+              <div class="resources-content-list">
+                <input type="radio" id="community-all-c" name="field_community_target_id-c" value="all" checked="checked" />
+                <label for="community-all-c">- Any -</label>
+              </div>
+              {# Loop through the rows to get the values #}
+              {% for row in rows %}
+                {% set termEntity = row._entity %}
+                {% set tid = termEntity.tid.value %}
+                {% set name = termEntity.name.value %}
+                {% set nameLower = termEntity.name.value|lower %}
+                {# Now you can use 'tid' and 'name' variables in your template #}
+                <div class="resources-content-list">
+                  <input type="radio" id="community-{{ nameLower }}-c" name="field_community_target_id-c" value="{{ tid }}" />
+                  <label for="community-{{ nameLower }}-c">{{ name }}</label>
+                </div>
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div> #}
+    {% endif %}
+  {% endif %}
   {% if content.field_interactive_card['#items'] %}
     <div class="container py-4 py-lg-0">
       <div class="col-lg-5 d-block d-lg-none">
