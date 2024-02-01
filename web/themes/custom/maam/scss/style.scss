@@ -77,3 +77,22 @@ a {
 .featured-bottom {
   padding: 80px 0;
 }
+.page-user-login form#user-login-form {
+  max-width: 35%;
+  margin: 200px auto;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .page-user-login form#user-login-form {
+    max-width: 60%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-user-login form#user-login-form {
+    max-width: 90%;
+    margin-bottom: 100px;
+  }
+}

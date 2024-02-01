@@ -29,7 +29,7 @@
  * @ingroup themeable
  */
 #}
-<style>
+{# <style>
 .header-margin{
    margin-top: 150px;
 }
@@ -41,8 +41,8 @@
     'block-' ~ plugin_id|clean_class,
     'header-margin',
   ]
-%}
-<div{{ attributes.addClass(classes) }}>
+%} #}
+{# <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>
@@ -53,4 +53,12 @@
       {{ content }}
     </div>
   {% endblock %}
+</div> #}
+<div class="community-page">
+  {{ content }}
 </div>
+
+
+
+
+

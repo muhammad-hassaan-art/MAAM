@@ -1,0 +1,48 @@
+.community-banner {
+  padding-top: 200px;
+  padding-bottom: 32px;
+  .row {
+    align-items: center;
+  }
+  .community-banner-content {
+    h1 {
+      font-family: Archivo;
+      font-size: 57px;
+      font-weight: 700;
+      line-height: 65px;
+      color: #131212;
+      margin-bottom: 40px;
+    }
+    p {
+      font-family: Archivo;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      color: #131212;
+      margin: 0;
+    }
+  }
+  .community-banner-img {
+    img {
+      border-radius: 12px;
+      box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.15);
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .community-banner {
+    padding-bottom: 16px;
+    .row {
+      gap: 32px;
+    }
+    .community-banner-content {
+      h1 {
+        font-family: Archivo;
+        font-size: 38px;
+        line-height: 50px;
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
