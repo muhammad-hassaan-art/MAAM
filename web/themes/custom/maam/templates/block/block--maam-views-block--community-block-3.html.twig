@@ -58,7 +58,8 @@
   {{ content }}
 </div>
 <script>
-    var formElement = document.querySelector('.views-exposed-form');
+document.addEventListener("DOMContentLoaded", function () {
+         var formElement = document.querySelector('.views-exposed-form');
     var targetElement = document.querySelector('.view-display-id-block_6');
 
     if (formElement && targetElement) {
@@ -67,5 +68,7 @@
     } else {
       console.error('One or both elements not found. Make sure they exist on the page.');
     }
+    });
+   
 </script>
 
