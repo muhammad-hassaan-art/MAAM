@@ -48,38 +48,41 @@
     </div>
   {% endblock %}
 </div>
+
 <script>
-  
+ document.addEventListener("DOMContentLoaded", function () {
+        removeDuplicateRows("resources-row", "h2");
+    });
+     // Select the target node using the class selector
+    var targetNode = document.getElementById('block-maam-views-block-resources-block-5');
+    if (!targetNode) {
+      console.error('Target element not found. Make sure it exists on the page.');
+    } else {
+      // Create an observer instance
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          // Handle the mutation here
+          removeDuplicateRows("resources-row", "h2");
+        });
+      });
+      // Configuration of the observer
+      var config = { childList: true, subtree: true };
+      // Start observing the target node for configured mutations
+      observer.observe(targetNode, config);
+      // You can later disconnect the observer if needed
+      // observer.disconnect();
+    }
+    function removeDuplicateRows(rowClassName, headingTagName) {
+        var rows = document.querySelectorAll("." + rowClassName);
+        var uniqueHeadings = {};
+        rows.forEach(function (row) {
+            var heading = row.querySelector(headingTagName).textContent.trim();
+            if (!uniqueHeadings[heading]) {
+                uniqueHeadings[heading] = true;
+            } else {
+                row.remove(); // Remove duplicate row
+            }
+        });
+    }
 
-
-    // Wait for the document to be ready
-document.addEventListener('DOMContentLoaded', function () {
-  // Get the parent element of all view-groupings
-  var parentElement = document.querySelector('.view-content.row');
- 
-  // Create a new div for type
-  var typeDiv = document.createElement('div');
-  typeDiv.id = 'type';
- 
-  // Create a new div for content
-  var contentDiv = document.createElement('div');
-  contentDiv.id = 'content';
- 
-  // Loop through each view-grouping
-  var viewGroupings = document.querySelectorAll('.view-grouping');
-  viewGroupings.forEach(function(viewGrouping) {
-    // Move header content to typeDiv
-    typeDiv.innerHTML += '<div>' + viewGrouping.querySelector('.view-grouping-header').innerHTML + '</div>';
-    // Move h3 content to typeDiv
-    typeDiv.innerHTML += '<div>' + viewGrouping.querySelector('.view-grouping-content h3').innerHTML + '</div>';
- 
-    // Move resources-listing-content to contentDiv
-    contentDiv.innerHTML += '<div>' + viewGrouping.querySelector('.resources-listing-content').innerHTML + '</div>';
-  });
- 
-  // Append the new divs to the parent element
-  parentElement.innerHTML = '';
-  parentElement.appendChild(typeDiv);
-  parentElement.appendChild(contentDiv);
-});
 </script>

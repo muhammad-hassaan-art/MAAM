@@ -30,7 +30,8 @@
         "drupal/styled_google_map": "2.3",
         "drupal/better_exposed_filters": "dev-6.0.x",
         "drupal/views_field_view": "dev-1.x",
-        "drupal/weather-weather": "dev-2.x"
+        "drupal/weather-weather": "dev-2.x",
+        "drupal/iframe": "2.24"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
