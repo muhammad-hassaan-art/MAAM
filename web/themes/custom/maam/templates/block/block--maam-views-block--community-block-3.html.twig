@@ -57,39 +57,15 @@
 <div class="community-page">
   {{ content }}
 </div>
-
-
-
 <script>
-    // Wait for the document to be ready
-document.addEventListener('DOMContentLoaded', function () {
-  // Get the parent element of all view-groupings
-  var parentElement = document.querySelector('.view-content.row');
- 
-  // Create a new div for type
-  var typeDiv = document.createElement('div');
-  typeDiv.id = 'type';
- 
-  // Create a new div for content
-  var contentDiv = document.createElement('div');
-  contentDiv.id = 'content';
- 
-  // Loop through each view-grouping
-  var viewGroupings = document.querySelectorAll('.view-grouping');
-  viewGroupings.forEach(function(viewGrouping) {
-    // Move header content to typeDiv
-    typeDiv.innerHTML += '<div>' + viewGrouping.querySelector('.view-grouping-header').innerHTML + '</div>';
-    // Move h3 content to typeDiv
-    typeDiv.innerHTML += '<div>' + viewGrouping.querySelector('.view-grouping-content h3').innerHTML + '</div>';
- 
-    // Move resources-listing-content to contentDiv
-    contentDiv.innerHTML += '<div>' + viewGrouping.querySelector('.resources-listing-content').innerHTML + '</div>';
-  });
- 
-  // Append the new divs to the parent element
-  parentElement.innerHTML = '';
-  parentElement.appendChild(typeDiv);
-  parentElement.appendChild(contentDiv);
-});
+    var formElement = document.querySelector('.views-exposed-form');
+    var targetElement = document.querySelector('.view-display-id-block_5');
+
+    if (formElement && targetElement) {
+      // Move the form element above the target element
+      targetElement.parentNode.insertBefore(formElement, targetElement);
+    } else {
+      console.error('One or both elements not found. Make sure they exist on the page.');
+    }
 </script>
 
