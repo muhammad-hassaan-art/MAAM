@@ -29,20 +29,14 @@
  * @ingroup themeable
  */
 #}
-{# <style>
-.header-margin{
-   margin-top: 150px;
-}
-</style>
 {%
   set classes = [
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
-    'header-margin',
   ]
-%} #}
-{# <div{{ attributes.addClass(classes) }}>
+%}
+<div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>
@@ -53,14 +47,11 @@
       {{ content }}
     </div>
   {% endblock %}
-</div> #}
-<div class="community-page">
-  {{ content }}
 </div>
-
-
-
 <script>
+  
+
+
     // Wait for the document to be ready
 document.addEventListener('DOMContentLoaded', function () {
   // Get the parent element of all view-groupings
@@ -92,4 +83,3 @@ document.addEventListener('DOMContentLoaded', function () {
   parentElement.appendChild(contentDiv);
 });
 </script>
-

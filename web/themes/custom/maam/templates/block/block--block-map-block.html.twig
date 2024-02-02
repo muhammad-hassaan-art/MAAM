@@ -1,4 +1,13 @@
-<div class="map-block">
+{# Get the URL path of the current page #}
+{% set currentPath = url('<current>') %}
+{% set currenPathString = currentPath['#markup'] %}
+
+{# Split the URL path into an array of components #}
+{% set currentPathLast = currenPathString|split('/') %}
+{# Get the last component of the path #}
+{% set lastPathComponent = currentPathLast|last %}
+
+<div class="map-block {% if lastPathComponent  == 'participating-communities' %}custom-map-width{% endif %}">
   <div class="map-bg-content">{{ content.field_map }}</div>
   <div class="container">
     <div class="row">

@@ -57,6 +57,61 @@
     }
   }
 }
+.custom-map-width {
+  margin-top: 80px;
+  .map-bg-content {
+    margin: auto;
+  }
+}
+@media (max-width: 576px) {
+  .custom-map-width {
+    .map-bg-content {
+      margin: unset;
+      padding: 20px 12px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .custom-map-width {
+    .map-bg-content {
+      max-width: 696px;
+    }
+    .container {
+      max-width: 600px;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .custom-map-width {
+    .map-bg-content {
+      max-width: 936px;
+    }
+    .container {
+      max-width: 720px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .custom-map-width {
+    .map-bg-content {
+      max-width: 1116px;
+    }
+    .container {
+      max-width: 860px;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .custom-map-width {
+    .map-bg-content {
+      max-width: 1296px;
+    }
+    .container {
+      max-width: 1000px;
+    }
+  }
+}
+
 @media screen and (max-width: 991px) {
   .map-block {
     .container {

@@ -69,3 +69,60 @@
     }
   }
 }
+@media screen and (max-width: 1260px) {
+  .facts-figures-block {
+    padding: 16px 0;
+    ul {
+      flex-wrap: wrap;
+      row-gap: 30px;
+      li {
+        width: 33.33%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .facts-figures-block {
+    ul {
+      li {
+        width: 50%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .facts-figures-block {
+    ul {
+      li {
+        width: 100%;
+      }
+    }
+    .heading {
+      h1 {
+        font-size: 38px;
+        line-height: 50px;
+        margin-bottom: 32px;
+      }
+    }
+
+    .facts-header-content {
+      gap: 15px;
+      padding: 20px;
+      .facts-number {
+        max-width: 150px;
+        font-size: 38px;
+        line-height: 50px;
+      }
+      .facts-title {
+        h4 {
+          font-size: 21px;
+          line-height: 28px;
+        }
+      }
+      .facts-content-description {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
