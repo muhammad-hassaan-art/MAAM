@@ -54,6 +54,8 @@
         line-height: 32px;
         color: #131212;
         margin-bottom: 0;
+        height: 64px;
+        overflow: auto;
       }
     }
     .facts-content-description {
@@ -63,6 +65,8 @@
       line-height: 28px;
       color: #131212;
       margin: 0;
+      height: 84px;
+      overflow: auto;
     }
     &:hover {
       transform: scale(1.1);
@@ -117,6 +121,7 @@
         h4 {
           font-size: 21px;
           line-height: 28px;
+          height: auto;
         }
       }
       .facts-content-description {

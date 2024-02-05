@@ -35,7 +35,7 @@
         color: #000;
         margin: 0;
         height: 120px;
-        overflow: hidden;
+        overflow: auto;
       }
       .date-content,
       .location-content {
@@ -108,7 +108,7 @@
         h2 {
           font-size: 21px;
           line-height: 25px;
-          height: auto;
+          height: 53px;
         }
       }
     }

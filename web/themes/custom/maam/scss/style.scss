@@ -85,14 +85,42 @@ a {
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.15);
   padding: 40px;
 }
+div#block-maam-dashboard {
+  padding: 180px 12px 60px 12px;
+  max-width: 80%;
+  margin: auto;
+  h2 {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.5;
+    font-family: Archivo;
+    margin-bottom: 20px;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.9;
+  }
+}
 @media screen and (max-width: 1024px) {
   .page-user-login form#user-login-form {
     max-width: 60%;
+  }
+  div#block-maam-dashboard {
+    iframe {
+      aspect-ratio: 1.5;
+    }
   }
 }
 @media screen and (max-width: 767px) {
   .page-user-login form#user-login-form {
     max-width: 90%;
     margin-bottom: 100px;
+  }
+  div#block-maam-dashboard {
+    max-width: 100%;
+    h2 {
+      font-size: 28px;
+    }
   }
 }

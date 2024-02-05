@@ -234,11 +234,16 @@
         align-items: flex-start;
         gap: 8px;
       }
+      .title {
+        padding-left: 12px;
+      }
       .date-content {
         gap: 16px;
       }
       .files-main-wrapper {
         flex-direction: column;
+        padding-left: 12px;
+        padding-bottom: 12px;
         .files-wrapper {
           flex-direction: column;
         }
