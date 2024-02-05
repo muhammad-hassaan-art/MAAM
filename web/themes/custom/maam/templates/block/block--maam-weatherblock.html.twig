@@ -20,7 +20,7 @@
         const weatherIconElement = document.getElementById('weather-icon');
         const conditionsElement = document.getElementById('conditions')
 
-        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=50.8198&lon=1.0880&appid=${ApiKey}`;
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=50.8198&lon=1.0880&appid=${ApiKey}&units=metric`;
 
         try {
             const response = await fetch(apiUrl);
