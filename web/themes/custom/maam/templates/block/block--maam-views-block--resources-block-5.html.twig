@@ -51,6 +51,12 @@
 
 <script>
  document.addEventListener("DOMContentLoaded", function () {
+      var anchorTag1 = document.getElementById('edit-field-resource-type-target-id-all');
+        // Check if the anchor tag exists
+        if (anchorTag1) {
+          // Update the text content
+          anchorTag1.textContent = 'All';
+        }
         removeDuplicateRows("resources-row", "h2");
     });
      // Select the target node using the class selector
@@ -83,6 +89,7 @@
                 row.remove(); // Remove duplicate row
             }
         });
+       
     }
 
 </script>

@@ -59,7 +59,7 @@
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-         var formElement = document.querySelector('.views-exposed-form');
+    var formElement = document.querySelector('.views-exposed-form');
     var targetElement = document.querySelector('.view-display-id-block_6');
 
     if (formElement && targetElement) {
@@ -68,6 +68,12 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       console.error('One or both elements not found. Make sure they exist on the page.');
     }
+    var anchorTag1 = document.getElementById('edit-field-resource-type-target-id-all');
+        // Check if the anchor tag exists
+        if (anchorTag1) {
+          // Update the text content
+          anchorTag1.textContent = 'All';
+        }
     });
    
 </script>
