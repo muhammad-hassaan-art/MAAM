@@ -230,4 +230,12 @@ document
   .addEventListener("click", function () {
     document.querySelector(".navbar-collapse").classList.toggle("show-navbar");
   });
+
+let pagelocation = window.location.pathname;
+let locationPath = pagelocation.split('/').filter(Boolean);
+let locationFilter = locationPath.includes('community') || locationPath.includes('dashboard');
+
+if (locationFilter) {
+  document.querySelector("#header").classList.add("community-header");
+}
   </script>

@@ -4,10 +4,6 @@
   gap: 24px;
   h3 {
     color: #131212;
-    font-family: Archivo;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 32px;
     margin: 0;
   }
   .upcomings-meetings-list {
@@ -93,10 +89,6 @@
 }
 @media screen and (max-width: 991px) {
   .upcoming-sidebar {
-    h3 {
-      font-size: 21px;
-      line-height: 25px;
-    }
     .upcomings-meetings-list {
       .view-content {
         .views-row {

@@ -9,7 +9,8 @@
 .user-logged-in .header {
   z-index: 0;
 }
-.header.scrolling-up {
+.header.scrolling-up,
+.community-header {
   background-color: #001253;
 }
 .header .navbar {

@@ -16,10 +16,6 @@
   .heading {
     padding: 40px 0;
     h1 {
-      font-family: Archivo;
-      font-size: 57px;
-      font-weight: 700;
-      line-height: 65px;
       color: #fff;
       text-transform: capitalize;
       margin: 0;
@@ -30,10 +26,6 @@
     flex-direction: column;
     gap: 40px;
     p {
-      font-family: Archivo;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 28px;
       color: #fff;
     }
     .community-link {
@@ -108,19 +100,11 @@
         flex-direction: column;
         gap: 8px;
         h1 {
-          font-family: Archivo;
-          font-size: 57px;
-          font-weight: 700;
-          line-height: 65px;
           color: #000;
           margin: 0;
         }
         .description {
           p {
-            font-family: Archivo;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 28px;
             color: #000;
             margin: 0;
             height: 112px;
@@ -156,10 +140,6 @@
     .heading {
       padding-top: 0;
       padding-bottom: 32px;
-      h1 {
-        font-size: 38px;
-        line-height: 50px;
-      }
     }
     .community-content {
       gap: 32px;
@@ -180,16 +160,6 @@
           }
           &::before {
             flex-shrink: 0;
-          }
-        }
-        .community-card-heading-content {
-          h1 {
-            font-size: 38px;
-            line-height: 50px;
-          }
-          p {
-            font-size: 14px;
-            line-height: 18px;
           }
         }
       }

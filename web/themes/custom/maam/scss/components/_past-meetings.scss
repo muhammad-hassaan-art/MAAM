@@ -4,10 +4,6 @@
   flex-direction: column;
   h3 {
     color: #131212;
-    font-family: Archivo;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 32px;
     margin: 0;
   }
   .past-meetings-wrapper {
@@ -168,10 +164,6 @@
 }
 @media screen and (max-width: 991px) {
   .past-meetings-block {
-    h3 {
-      font-size: 21px;
-      line-height: 25px;
-    }
     .past-meetings-wrapper {
       .view-upcoming-meetings {
         display: flex;
