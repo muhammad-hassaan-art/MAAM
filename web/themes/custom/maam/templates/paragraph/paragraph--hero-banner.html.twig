@@ -35,8 +35,9 @@
                 <legend>Resources By Community</legend>
                 <div class="resources-content-wrapper">
                   <div class="resources-content-list">
-                    <input type="radio" id="community-all-c" name="field_community_target_id-c" value="all" checked="checked" />
-                    <label for="community-all-c">- Any -</label>
+                    <a href="community-all-c" id="community-all-c" name="field_community_target_id-c">- Any -</a>
+                    {# <input type="radio" id="community-all-c" name="field_community_target_id-c" value="all" checked="checked" />
+                    <label for="community-all-c">- Any -</label> #}
                   </div>
                   {# Loop through the rows to get the values #}
                   {% for row in rows %}
@@ -46,8 +47,9 @@
                     {% set nameLower = termEntity.name.value|lower %}
                     {# Now you can use 'tid' and 'name' variables in your template #}
                     <div class="resources-content-list">
-                      <input type="radio" id="community-{{ nameLower }}-c" name="field_community_target_id-c" value="{{ tid }}" />
-                      <label for="community-{{ nameLower }}-c">{{ name }}</label>
+                      <a href="community-{{ nameLower }}-c" id="community-{{ nameLower }}-c" name="field_community_target_id-c">{{ name }}</a>
+                      {# <input type="radio" id="community-{{ nameLower }}-c" name="field_community_target_id-c" value="{{ tid }}" />
+                      <label for="community-{{ nameLower }}-c">{{ name }}</label> #}
                     </div>
                   {% endfor %}
                 </div>
@@ -103,8 +105,10 @@
             <legend>Resources By Community</legend>
             <div class="resources-content-wrapper">
               <div class="resources-content-list">
-                <input type="radio" id="community-all-c" name="field_community_target_id-c" value="all" checked="checked" />
-                <label for="community-all-c">- Any -</label>
+                <a href="community-all-c" id="community-all-c" class="field_community_target_id-c">- Any -</a>
+
+                {# <input type="radio" id="community-all-c" name="field_community_target_id-c" value="all" checked="checked" />
+                <label for="community-all-c">- Any -</label> #}
               </div>
               {# Loop through the rows to get the values #}
               {% for row in rows %}
@@ -114,8 +118,10 @@
                 {% set nameLower = termEntity.name.value|lower %}
                 {# Now you can use 'tid' and 'name' variables in your template #}
                 <div class="resources-content-list">
-                  <input type="radio" id="community-{{ nameLower }}-c" name="field_community_target_id-c" value="{{ tid }}" />
-                  <label for="community-{{ nameLower }}-c">{{ name }}</label>
+                   <a href="community-{{ nameLower }}-c" id="community-{{ nameLower }}-c" class="field_community_target_id-c">{{ name }}</a>
+                  
+                  {# <input type="radio" id="community-{{ nameLower }}-c" name="field_community_target_id-c" value="{{ tid }}" />
+                  <label for="community-{{ nameLower }}-c">{{ name }}</label> #}
                 </div>
               {% endfor %}
             </div>
@@ -160,13 +166,13 @@
 </div>
 <script>
   // Get all radio buttons
-  const radioButtons = document.querySelectorAll('input[name="field_community_target_id-c"]')
+  const radioButtons = document.querySelectorAll('.field_community_target_id-c')
   
   // Add click event listener to each radio button
   radioButtons.forEach((radioButton) => {
     radioButton.addEventListener('click', () => {
       // Get the value of the selected radio button
-      const selectedValue = document.querySelector('input[name="field_community_target_id-c"]:checked').value
+      const selectedValue = document.querySelector('.field_community_target_id-c').value
   
       // Find the corresponding radio button in the target fieldset and trigger a click event
       const targetRadioButton = document.getElementById(`edit-field-community-target-id-1-${selectedValue}`)

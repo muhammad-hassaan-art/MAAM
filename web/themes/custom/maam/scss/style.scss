@@ -102,6 +102,26 @@ div#block-maam-dashboard {
     aspect-ratio: 1.9;
   }
 }
+.key-partners-page {
+  padding: 80px 0;
+  margin: 80px 0;
+  .key-partners-card {
+    background: #001253;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s;
+    .key-partners-content {
+      color: #fff;
+      a {
+        color: #fff;
+      }
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .page-user-login form#user-login-form {
     max-width: 60%;

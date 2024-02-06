@@ -8,10 +8,10 @@
 						<p>{{ content.body['#items'].value | striptags }}</p>
 					{% endif %}
 					<div class="key-partners-link">
-						{% if content.field_cta['#items'].uri is not empty %}
-							<a href="{{ content.field_cta['#items'].uri }}">{{ content.field_cta['#items'].title }}</a>
-						{% endif %}
-					</div>
+                        {% if content.field_cta['#items'].uri is not empty %}
+                            {{content.field_cta}}
+                        {% endif %}
+                    </div>
 				</div>
 			</div>
 			<div class="col-lg-9">
@@ -23,7 +23,7 @@
 	</div>
 </div>
 
-<div class="key-partners-card">
+{# <div class="key-partners-card">
 	<div class="key-partners-content">
 		{% if field_partner_logo is not empty %}
 			{{ field_partner_logo }}
@@ -32,4 +32,4 @@
 			{{ field_partner_link }}
 		{% endif %}
 	</div>
-</div>
+</div> #}

@@ -15,7 +15,8 @@
 						{% endif %}
 						<div class="community-link">
 							{% if content.field_cta['#items'].uri is not empty %}
-								<a href="{{ content.field_cta['#items'].uri }}">{{ content.field_cta['#items'].title }}</a>
+								 {{content.field_cta}}
+								{# <a href="{{ content.field_cta['#items'].uri }}">{{ content.field_cta['#items'].title }}</a> #}
 							{% endif %}
 						</div>
 					</div>
