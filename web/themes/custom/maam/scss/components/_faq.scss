@@ -20,7 +20,7 @@
     border-radius: 12px;
     gap: 24px;
     .faq-question {
-      h3 {
+      h4 {
         margin: 0;
         color: #1c66a6;
         display: flex;
@@ -40,7 +40,7 @@
       }
     }
     .faq-question-show {
-      h3 {
+      h4 {
         color: #131212;
         &::after {
           transform: rotate(0deg);
@@ -75,7 +75,7 @@
       padding: 12px;
       gap: 16px;
       .faq-question {
-        h3 {
+        h4 {
           gap: 12px;
         }
       }

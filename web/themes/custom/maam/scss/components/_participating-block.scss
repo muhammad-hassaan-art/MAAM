@@ -56,13 +56,9 @@
         p {
           font-family: Archivo;
           margin: 0;
-          height: 72px;
-          overflow: auto;
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-          &::-webkit-scrollbar {
-            display: none;
-          }
+          height: 84px;
+          overflow: hidden;
+          word-break: break-all;
         }
       }
       .participating-link a {
@@ -80,7 +76,21 @@
     }
   }
 }
-
+@media screen and (max-width: 1549px) {
+  .participating-cards-block {
+    padding: 80px 0;
+    .participating-card {
+      .participating-card-content {
+        .body-content {
+          p {
+            height: 72px;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 767px) {
   .participating-cards-block {
     padding: 64px 0;
@@ -95,6 +105,11 @@
           a {
             font-size: 21px;
             line-height: 25px;
+          }
+        }
+        .body-content {
+          p {
+            height: auto;
           }
         }
       }

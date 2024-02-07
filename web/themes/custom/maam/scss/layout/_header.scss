@@ -27,6 +27,12 @@
           display: block;
         }
       }
+      .dropdown-item.active {
+        background: #1c66a6;
+        a {
+          color: #fff;
+        }
+      }
     }
   }
 }

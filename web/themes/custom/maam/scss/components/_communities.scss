@@ -107,8 +107,9 @@
           p {
             color: #000;
             margin: 0;
-            height: 112px;
-            overflow: auto;
+            height: 120px;
+            overflow: hidden;
+            word-break: break-all;
             a {
               text-decoration: none !important;
               color: #000;
@@ -160,6 +161,32 @@
           }
           &::before {
             flex-shrink: 0;
+          }
+        }
+        .community-card-heading-content {
+          .description {
+            p {
+              color: #000;
+              margin: 0;
+              height: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .community-block {
+    .community-card {
+      .community-content {
+        .community-card-heading-content {
+          .description {
+            p {
+              color: #000;
+              margin: 0;
+              height: auto;
+            }
           }
         }
       }
