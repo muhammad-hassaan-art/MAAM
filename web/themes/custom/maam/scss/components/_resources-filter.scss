@@ -29,6 +29,10 @@
             font-family: Archivo;
             color: #1c66a6;
           }
+          .bef-link--selected {
+            font-weight: 700 !important;
+            color: #131212 !important;
+          }
         }
       }
     }
@@ -44,6 +48,7 @@
     }
   }
 }
+
 @media screen and (max-width: 767px) {
   .views-exposed-form {
     .form-item-field-resource-type-target-id {

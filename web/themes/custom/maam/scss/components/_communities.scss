@@ -76,7 +76,7 @@
       .community-card-icon-wrapper {
         display: flex;
         align-items: center;
-        a {
+        span {
           font-family: Archivo;
           font-size: 18px;
           font-weight: 800;
@@ -92,7 +92,7 @@
           display: inline-block;
           background-image: url(/themes/custom/maam/images/community-icon.svg);
           width: 32px;
-          height: 32px;
+          height: 33px;
         }
       }
       .community-card-heading-content {
@@ -126,6 +126,20 @@
           line-height: 24px;
           text-decoration-line: underline;
           color: #1c66a6;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          &:after {
+            content: "";
+            background-image: url(/themes/custom/maam/images/right-arrow.svg);
+            background-size: cover;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+          }
+          &:first-child::after {
+            display: none;
+          }
         }
       }
     }

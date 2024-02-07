@@ -238,4 +238,8 @@ let locationFilter = locationPath.includes('community') || locationPath.includes
 if (locationFilter) {
   document.querySelector("#header").classList.add("community-header");
 }
+document.querySelector(".nav-link--participating-communities").addEventListener("click",function(){
+  var redirectTo = "/participating-communities";
+  window.location.href = redirectTo;
+})
   </script>

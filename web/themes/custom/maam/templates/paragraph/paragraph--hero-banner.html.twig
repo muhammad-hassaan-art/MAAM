@@ -38,7 +38,7 @@
                     <a href="" 
                       id="edit-field-community-target-id-1-all-c" 
                       name="field_community_target_id_1[All]-c"
-                      class="bef-link bef-link-c">
+                      class="bef-link bef-link-c active">
                       All</a>
                   </div>
                   {# Loop through the rows to get the values #}
@@ -116,7 +116,7 @@
                 <a href="" 
                 id="edit-field-community-target-id-1-all-c" 
                 name="field_community_target_id_1[All]-c"
-                class="bef-link bef-link-c">
+                class="bef-link bef-link-c active">
                 All</a>
 
                 {# <input type="radio" id="community-all-c" name="field_community_target_id-c" value="all" checked="checked" />
@@ -195,8 +195,17 @@ anchorTags.forEach((anchorTag) => {
     const targetAnchorTag = document.getElementById(`edit-field-community-target-id-1-${selectedValue}`);
     if (targetAnchorTag) {
       targetAnchorTag.click();
+      console.log(targetAnchorTag)
     }
   });
 });
-
+const activeLink = document.querySelectorAll(".resources-content-list a");
+for(let i=0; i< activeLink.length; i++){
+    activeLink[i].addEventListener("click", function(){
+        document.querySelectorAll(".resources-content-list a").forEach(function(link){
+            link.classList.remove("active")
+        })
+        activeLink[i].classList.add("active")
+    })
+}
 </script>

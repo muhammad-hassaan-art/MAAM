@@ -61,14 +61,30 @@
           word-break: break-all;
         }
       }
-      .participating-link a {
-        color: #1c66a6;
-        font-family: Archivo;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        text-decoration-line: underline;
+      .participating-link {
+        a {
+          color: #1c66a6;
+          font-family: Archivo;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          text-decoration-line: underline;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          &::after {
+            content: "";
+            background-image: url(/themes/custom/maam/images/right-angel.svg);
+            background-size: cover;
+            width: 10px;
+            height: 15px;
+            display: inline-block;
+          }
+          &:first-child::after {
+            display: none;
+          }
+        }
       }
     }
     &:hover {
