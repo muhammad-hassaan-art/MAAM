@@ -19,12 +19,13 @@
         }
       });
 
-      document.addEventListener("DOMContentLoaded", function () {
-        const counters = document.querySelectorAll(".counter");
+      $(document).ready(function () {
+        const counters = $(".counter");
+        console.log("hello world");
 
-        counters.forEach(function (counter) {
-          const targetValue = parseInt(counter.textContent.trim());
-          startCounter(counter, targetValue);
+        counters.each(function () {
+          const targetValue = parseInt($(this).text().trim());
+          startCounter($(this), targetValue);
         });
 
         function startCounter(element, targetValue) {
@@ -39,7 +40,7 @@
             );
             currentValue = Math.ceil(progress * targetValue);
 
-            element.textContent = currentValue;
+            element.text(currentValue);
 
             if (progress < 1) {
               window.requestAnimationFrame(updateCounter);
@@ -53,4 +54,3 @@
     },
   };
 })(jQuery, Drupal);
-console.log("hello world");
