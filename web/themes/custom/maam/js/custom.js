@@ -21,8 +21,6 @@
 
       $(document).ready(function () {
         const counters = $(".counter");
-        console.log("hello world");
-
         counters.each(function () {
           const targetValue = parseInt($(this).text().trim());
           startCounter($(this), targetValue);
@@ -30,7 +28,7 @@
 
         function startCounter(element, targetValue) {
           let currentValue = 0;
-          const duration = 5000;
+          const duration = targetValue * 10;
 
           function updateCounter(timestamp) {
             if (!startTimestamp) startTimestamp = timestamp;
