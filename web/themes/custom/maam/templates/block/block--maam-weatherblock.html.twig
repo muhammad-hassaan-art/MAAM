@@ -18,9 +18,10 @@
         const temperatureElement = document.getElementById('temperature');
         const feelsLikeElement = document.getElementById('feels-like');
         const weatherIconElement = document.getElementById('weather-icon');
-        const conditionsElement = document.getElementById('conditions')
-
-        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=50.8198&lon=1.0880&appid=${ApiKey}&units=metric`;
+        const conditionsElement = document.getElementById('conditions');
+        const lat = 43.071754;
+        const lon = -70.762550;
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${ApiKey}&units=imperial`;
 
         try {
             const response = await fetch(apiUrl);
@@ -35,8 +36,8 @@
             console.log('weather', weather);
 
             // Update HTML elements with temperature, feels_like, and weather icon data
-            temperatureElement.textContent = `${main.temp} °C`;
-            feelsLikeElement.textContent = `${main.feels_like} °C`;
+            temperatureElement.textContent = `${ Math.round( main.temp )} °F`;
+            feelsLikeElement.textContent = `${Math.round( main.feels_like )} °F`;
 
             // Set the weather icon image source
             if (weather.length > 0) {
